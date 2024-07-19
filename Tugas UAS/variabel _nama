@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mahasiswa</title>
+</head>
+<body>
+  <script>
+    let Nama = "John Doe";
+    let Jurusan = "Informatika";
+    let Alamat = "Jalan Raya No. 123, Jakarta";
+
+    // You can display the variables using HTML elements
+    document.write("Nama: " + Nama + "<br>");
+    document.write("Jurusan: " + Jurusan + "<br>");
+    document.write("Alamat: " + Alamat + "<br>");
+  </script>
+</body>
+</html>

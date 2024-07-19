@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Penjumlahan</title>
+</head>
+<body>
+  <h1>Penjumlahan</h1>
+  <input type="number" id="nilai1" placeholder="Masukkan nilai pertama">
+  <input type="number" id="nilai2" placeholder="Masukkan nilai kedua">
+  <button onclick="penjumlah()">Hitung</button>
+  <p id="hasil"></p>
+
+  <script>
+    function penjumlah() {
+      let nilai1 = document.getElementById("nilai1").valueAsNumber;
+      let nilai2 = document.getElementById("nilai2").valueAsNumber;
+      let hasilElement = document.getElementById("hasil");
+
+      if (isNaN(nilai1) || isNaN(nilai2)) {
+        hasilElement.innerHTML = "Error: Both inputs must be numbers";
+      } else {
+        let hasil = nilai1 + nilai2;
+        hasilElement.innerHTML = "Hasil: " + hasil;
+      }
+    }
+  </script>
+</body>
+</html>

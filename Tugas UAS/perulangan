@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Perulangan dengan For</title>
+</head>
+<body>
+  <h1>Perulangan dengan For</h1>
+  <ul id="angka-list"></ul>
+
+  <script>
+    let angkaList = document.getElementById("angka-list");
+
+    for (let i = 20; i <= 30; i++) {
+      let listItem = document.createElement("li");
+      listItem.textContent = i;
+      angkaList.appendChild(listItem);
+    }
+  </script>
+</body>
+</html>

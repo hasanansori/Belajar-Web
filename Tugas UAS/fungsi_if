@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ucapan Berdasarkan Waktu</title>
+</head>
+<body>
+  <h1>Ucapan Berdasarkan Waktu</h1>
+  <input type="number" id="waktu" placeholder="Masukkan waktu (jam)">
+  <button onclick="ucapan()">Tampilkan Ucapan</button>
+  <p id="ucapan"></p>
+
+  <script>
+    function ucapan() {
+      let waktu = document.getElementById("waktu").value;
+      let ucapanElement = document.getElementById("ucapan");
+
+      if (waktu < 12) {
+        ucapanElement.innerHTML = "Selamat Pagi!";
+      } else if (waktu >= 12 && waktu <= 15) {
+        ucapanElement.innerHTML = "Selamat Siang!";
+      } else if (waktu > 15 && waktu <= 19) {
+        ucapanElement.innerHTML = "Selamat Sore!";
+      } else {
+        ucapanElement.innerHTML = "Selamat Malam!";
+      }
+    }
+  </script>
+</body>
+</html>
