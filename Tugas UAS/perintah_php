@@ -1,20 +1,39 @@
 <?php
-// Connect to MySQL server
-$conn = mysqli_connect("localhost", "username", "password");
+// Konfigurasi database
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "UTS";
 
-// Check connection
-if (!$conn) {
-  die("Connection failed: " . mysqli_connect_error());
+// Membuat koneksi ke database
+$conn = new mysqli($servername, $username, $password);
+
+// Cek koneksi
+if ($conn->connect_error) {
+    die("Koneksi gagal: " . $conn->connect_error);
 }
 
-// Create database
+// Membuat database
 $sql = "CREATE DATABASE UTS";
-if (mysqli_query($conn, $sql)) {
-  echo "Database created successfully";
+if ($conn->query($sql) === TRUE) {
+    echo "Database UTS berhasil dibuat";
 } else {
-  echo "Error creating database: " . mysqli_error($conn);
+    echo "Error creating database: " . $conn->error;
 }
 
-// Close connection
-mysqli_close($conn);
+// Membuat tabel mahasiswa
+$sql = "CREATE TABLE mahasiswa (
+    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    nama VARCHAR(30) NOT NULL,
+    jurusan VARCHAR(30) NOT NULL,
+    alamat TEXT NOT NULL
+)";
+if ($conn->query($sql) === TRUE) {
+    echo "Tabel mahasiswa berhasil dibuat";
+} else {
+    echo "Error creating table: " . $conn->error;
+}
+
+// Menutup koneksi
+$conn->close();
 ?>

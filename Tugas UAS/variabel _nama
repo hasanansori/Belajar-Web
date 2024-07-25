@@ -5,9 +5,9 @@
 </head>
 <body>
   <script>
-    let Nama = "John Doe";
-    let Jurusan = "Informatika";
-    let Alamat = "Jalan Raya No. 123, Jakarta";
+    let Nama = "Hasan Anshori";
+    let Jurusan = "Sistem Informatika";
+    let Alamat = "Jln.Perkutut Kel.Leneng Kec.Praya Lombok Tengah";
 
     // You can display the variables using HTML elements
     document.write("Nama: " + Nama + "<br>");
